@@ -21,9 +21,42 @@
 body {
     background-color: rgb(209, 109, 109);
     color: white;
+    height: 100vh;
 }
 
-header h1 {
-    text-align: center;
-    font-size: 26px;
+header {
+    height: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header h1 a{
+    font-size: 40px;
+    font-weight: 600;
+    text-decoration: none;
+    color: #fff;
+}
+
+main {
+    height: 90%;
+    position: relative;
+}
+
+#español {
+    height: 80px;
+    width: 80px;
+    border-radius: 50%;
+    background-color: white;
+    color: rgb(209, 109, 109);
+    position: absolute;
+    bottom: 50px;
+    right: 50px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+#español a img {
+    height: 100%;
+    width: auto;
 }
