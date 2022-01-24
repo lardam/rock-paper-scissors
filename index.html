@@ -12,8 +12,31 @@
         <h1><a href="index.html">Rock Paper Scissors</a></h1>
     </header>
     <main>
-        //crear el juego
+        <div id="user">
+            <h2>Choose your ighter</h2>
+            <div id="options-container">
+                <ul id="options">
+                    <li id="rock" class="user-option"></li>
+                    <li id="paper" class="user-option"></li>
+                    <li id="scissors" class="user-option"></li>
+                </ul>
+            </div>
+            <p id="user-choice">No choice made yet</p>
+        </div>
+        <div id="computer">
+            <p id="computer-choice">Whenever you're ready</p>
+            <div id="computer-container">
+                <div id="computer-selection"></div>
+            </div>
+        </div>
     </main>
+    <footer>
+        <p id="round-result">-</p>
+        <div id="score">
+            <p id="your-score">You: 0</p>
+            <p id="computer-score">Computer: 0</p>
+        </div>
+    </footer>
     <i id="español"><a href=""><img src="resources/Bandera_de_España.svg" alt=""></a></i>
 </body>
 <script src="js/app.js"></script>

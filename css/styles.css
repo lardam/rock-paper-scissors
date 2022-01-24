@@ -6,11 +6,12 @@
     font-family: 'Recoleta', 'Roboto', sans-serif;
 }
 
+/*Recoleta*/
+
 @font-face {
     font-family: 'Recoleta';
-    src: url('../fonts/Recoleta-RegularDEMO.eot');
-    src: url('../fonts/Recoleta-RegularDEMO.eot?#iefix') format('embedded-opentype'),
-        url('../fonts/Recoleta-RegularDEMO.woff2') format('woff2'),
+    src: url('../fonts/Recoleta-RegularDEMO.eot;');
+    src: url('../fonts/Recoleta-RegularDEMO.woff2') format('woff2'),
         url('../fonts/Recoleta-RegularDEMO.woff') format('woff'),
         url('../fonts/Recoleta-RegularDEMO.ttf') format('truetype');
     font-weight: normal;
@@ -39,9 +40,15 @@ header h1 a{
 }
 
 main {
-    height: 90%;
+    height: 80%;
     position: relative;
 }
+
+p {
+    font-size: 20px;
+}
+
+/*To spanish*/
 
 #español {
     height: 80px;
@@ -59,4 +66,64 @@ main {
 #español a img {
     height: 100%;
     width: auto;
+    position: absolute;
+    left: -15px;
+}
+
+/*User options*/
+
+#user, #computer {
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+#user h2 {
+    font-size: 24px;
+}
+
+#options-container, #computer-container {
+    height: 55%;
+    width: 50%;
+}
+
+#options {
+    list-style: none;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 100%;
+    width: auto;
+}
+
+#options li {
+    height: 80%;
+    width: 20%;
+    border-radius: 5px;
+    background-color: burlywood;
+}
+
+/*Computer response*/
+
+#computer-container {
+    display: flex;
+    justify-content: center;
+}
+
+#computer-selection {
+    height: 80%;
+    width: 20%;
+    border-radius: 5px;
+    background-color: burlywood;
+}
+
+/*Footer*/
+
+footer {
+    height: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
 }
