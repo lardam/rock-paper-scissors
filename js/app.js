@@ -38,15 +38,12 @@ function game() {
 
                 if(options[random] === 'rock') {
                     computerImg.src = '../resources/hand-back-fist-regular.svg'
-                    computerImg.alt = 'rock'
                 }
                 else if(options[random] === 'paper') {
                     computerImg.src = '../resources/hand-regular.svg'
-                    computerImg.alt = 'paper'
                 }
                 else if(options[random] === 'scissors') {
                     computerImg.src = '../resources/hand-scissors-regular.svg'
-                    computerImg.alt = 'scissors'
                 }
 
                 //Loop for each outcome
