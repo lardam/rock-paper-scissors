@@ -1,26 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap');
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-size: 16px;
-    font-family: 'Recoleta', 'Roboto', sans-serif;
-}
-
-/*Recoleta*/
-
-@font-face {
-    font-family: 'Recoleta';
-    src: url('../fonts/Recoleta-RegularDEMO.eot;');
-    src: url('../fonts/Recoleta-RegularDEMO.woff2') format('woff2'),
-        url('../fonts/Recoleta-RegularDEMO.woff') format('woff'),
-        url('../fonts/Recoleta-RegularDEMO.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
+    font-family: 'Ubuntu', 'Roboto', sans-serif;
 }
 
 body {
-    background-color: rgb(209, 109, 109);
+    background-color: #03914E;
     color: white;
     height: 100vh;
 }
@@ -46,28 +35,6 @@ main {
 
 p {
     font-size: 20px;
-}
-
-/*To spanish*/
-
-#español {
-    height: 80px;
-    width: 80px;
-    border-radius: 50%;
-    background-color: white;
-    color: rgb(209, 109, 109);
-    position: absolute;
-    bottom: 50px;
-    right: 50px;
-    overflow: hidden;
-    cursor: pointer;
-}
-
-#español a img {
-    height: 100%;
-    width: auto;
-    position: absolute;
-    left: -15px;
 }
 
 /*User options*/
@@ -98,11 +65,25 @@ p {
     width: auto;
 }
 
-#options li {
+#options li, #computer-selection {
     height: 80%;
     width: 20%;
     border-radius: 5px;
-    background-color: burlywood;
+    background-color: #039E56;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.1s ease-in-out;
+}
+
+#options li img, #computer-img {
+    height: 80%;
+    width: 80%;
+    cursor: pointer;
+}
+
+#options li:hover {
+    background-color: #fff;
 }
 
 /*Computer response*/
@@ -112,11 +93,40 @@ p {
     justify-content: center;
 }
 
-#computer-selection {
-    height: 80%;
-    width: 20%;
+/*Result modal*/
+
+#result-modal {
+    display: none;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    position: absolute;
+    left: 30%;
+    top: 40%;
+    background-color: #fff;
+    z-index: 2;
+    height: 20%;
+    width: 40%;
     border-radius: 5px;
-    background-color: burlywood;
+}
+
+#message-modal {
+    color: #03914E;
+}
+
+#close-modal {
+    background-color: #03914E;
+    color: #fff;
+    padding: 1% 2%;
+    border: 1px solid #039E56;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: all 0.1s ease-in-out;
+}
+
+#close-modal:hover {
+    background-color: #fff;
+    color: #03914E;
 }
 
 /*Footer*/
@@ -126,4 +136,22 @@ footer {
     display: flex;
     align-items: center;
     justify-content: space-evenly;
+}
+
+@media screen and (max-width: 420px) {
+    header h1 a {
+        font-size: 30px;
+    }
+    #user h2 {
+        font-size: 22px;
+    }
+    p {
+        font-size: 18px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    #options-container, #computer-selection {
+        width: unset;
+    }
 }

@@ -1,5 +1,7 @@
 # rock-paper-scissors
-self-explanatory
+A game of rock paper scissors made with HTML, CSS and Javascript
+
+https://lardam.github.io/rock-paper-scissors/
 
 Hecho para The Odin Proyect
 
@@ -11,13 +13,13 @@ Roadmap:
 
 * Terminar el juego ✓
 
-* Agregar imágenes
+* Agregar imágenes ✓
 
-* Hacer la versión en español
+* Hacer la página mobile responsive ✓
 
-* Hacer la página mobile responsive
+* Cambiar alert por un modal con estilos ✓
 
-* Cambiar alert por un modal con estilos
+* Rehacer Javascript
 
 //
 
@@ -27,16 +29,10 @@ Roadmap:
 
 * Game finished ✓
 
-* Add icons/images
+* Add icons/images ✓
 
-* Add spanish language
+* Mobile responsive ✓
 
-* Mobile responsive
+* Swap alert() for a styled message ✓
 
-* Swap alert() for a styled message
-
-Font: Recoleta - for testing purposes only
-
-Color palette: #fff, rgb(209, 109, 109)
-
-Languages: English, Spanish
+* Redo Javascript

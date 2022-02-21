@@ -13,6 +13,10 @@ function game() {
     const userScoreTxt = document.getElementById('your-score')
     const computerScoreTxt = document.getElementById('computer-score')
 
+    const modal = document.getElementById('result-modal')
+    const modalText = document.getElementById('message-modal')
+    const closeModal = document.getElementById('close-modal')
+
     function selection() {
         allUserChoices.forEach(item => {
             item.addEventListener('click', () =>{
@@ -27,6 +31,23 @@ function game() {
                 let computerText = `Computer chose ${options[random]}`;
 
                 computerChoice.innerHTML = computerText;
+
+                //Give the computer selection an image
+
+                const computerImg = document.getElementById('computer-img')
+
+                if(options[random] === 'rock') {
+                    computerImg.src = '../resources/hand-back-fist-regular.svg'
+                    computerImg.alt = 'rock'
+                }
+                else if(options[random] === 'paper') {
+                    computerImg.src = '../resources/hand-regular.svg'
+                    computerImg.alt = 'paper'
+                }
+                else if(options[random] === 'scissors') {
+                    computerImg.src = '../resources/hand-scissors-regular.svg'
+                    computerImg.alt = 'scissors'
+                }
 
                 //Loop for each outcome
 
@@ -67,7 +88,9 @@ function game() {
                 //End-game
 
                 if (userScore === 5) {
-                    alert('You won a cookie!')
+                    modal.style.display = 'flex'
+                    modalText.textContent = 'You won!'
+                    closeModal.addEventListener('click', () => modal.style.display = 'none')
 
                     userScore = 0;
                     computerScore = 0;
@@ -80,7 +103,9 @@ function game() {
                     result.innerHTML = "-"
                 }
                 else if (computerScore === 5){
-                    alert('Booooooo')
+                    modal.style.display = 'flex'
+                    modalText.textContent = 'Booooooo, you lose!'
+                    closeModal.addEventListener('click', () => modal.style.display = 'none')
 
                     userScore = 0;
                     computerScore = 0;
