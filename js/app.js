@@ -52,34 +52,34 @@ function game() {
                     result.innerHTML = "It's a tie"
                 }
                 else if (item.id === 'rock' && options[random] === 'paper'){
-                    result.innerHTML = 'You lose!'
                     computerScore++;
                     computerScoreTxt.innerHTML = `Computer: ${computerScore}`
+                    result.textContent = 'You lose!'
                 }
                 else if (item.id === 'rock' && options[random] === 'scissors'){
-                    result.innerHTML = 'You won!'
                     userScore++;
                     userScoreTxt.innerHTML = `You: ${userScore}`
+                    result.textContent = 'You won!'
                 }
                 else if (item.id === 'paper' && options[random] === 'rock'){
-                    result.innerHTML = 'You won!'
                     userScore++;
                     userScoreTxt.innerHTML = `You: ${userScore}`
+                    result.textContent = 'You won!'
                 }
                 else if (item.id === 'paper' && options[random] === 'scissors'){
-                    result.innerHTML = 'You lose!'
                     computerScore++;
                     computerScoreTxt.innerHTML = `Computer: ${computerScore}`
+                    result.textContent = 'You lose!'
                 }
                 else if (item.id === 'scissors' && options[random] === 'rock'){
-                    result.innerHTML = 'You lose!'
                     computerScore++;
                     computerScoreTxt.innerHTML = `Computer: ${computerScore}`
+                    result.textContent = 'You lose!'
                 }
                 else if (item.id === 'scissors' && options[random] === 'paper'){
-                    result.innerHTML = 'You won!'
                     userScore++;
                     userScoreTxt.innerHTML = `You: ${userScore}`
+                    result.textContent = 'You won!'
                 }
 
                 //End-game
@@ -114,9 +114,10 @@ function game() {
                     computerChoice.innerHTML = "Whenever you're ready"
                     result.innerHTML = "-"
                 }
-            })
         })
+    })
     }
     selection()
 }
+
 game()
