@@ -119,5 +119,4 @@ function game() {
     }
     selection()
 }
-
 game()
