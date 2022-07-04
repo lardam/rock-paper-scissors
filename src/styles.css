@@ -1,0 +1,126 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Lato', sans-serif; }
+
+body {
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  position: relative; }
+  body header {
+    height: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #7A3C74;
+    color: #fff; }
+  body main {
+    height: 80%;
+    padding: 2rem 0;
+    display: grid;
+    grid-template-rows: 1fr 1fr; }
+    body main #user {
+      display: grid;
+      grid-template-rows: 1fr 4fr 1fr; }
+      body main #user h2, body main #user #user-choice {
+        align-self: center;
+        justify-self: center;
+        color: #7A6178; }
+      body main #user #options-container #options {
+        height: 100%;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        list-style: none; }
+        body main #user #options-container #options .user-option {
+          height: 5rem;
+          width: 5rem;
+          border-radius: 15px;
+          display: flex;
+          justify-content: space-around;
+          align-items: center;
+          background-color: #7A3C74;
+          cursor: pointer; }
+          body main #user #options-container #options .user-option i {
+            font-size: 3.5rem;
+            color: #fff; }
+    body main #computer {
+      display: grid;
+      grid-template-rows: 2fr 3fr;
+      align-items: center; }
+      body main #computer #computer-choice, body main #computer #computer-selection {
+        align-self: center;
+        justify-self: center;
+        color: #7A6178; }
+      body main #computer #computer-selection {
+        height: 5rem;
+        width: 5rem;
+        border-radius: 15px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #7A6178; }
+        body main #computer #computer-selection i {
+          font-size: 3.5rem;
+          color: #fff; }
+  body footer {
+    height: 10%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: #7A3C74;
+    color: #fff; }
+    body footer #round-result {
+      font-weight: 600; }
+  body #overlay {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: none;
+    z-index: 1;
+    background-color: #f2f2f2;
+    opacity: 0.2; }
+  body #result-modal {
+    height: 200px;
+    width: 300px;
+    border-radius: 10px;
+    position: absolute;
+    top: calc(50% - 100px);
+    left: calc(50% - 150px);
+    display: none;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    z-index: 2;
+    background-color: #7A3C74;
+    color: #fff; }
+    body #result-modal #message-modal {
+      font-size: 1.5rem;
+      font-weight: 600; }
+    body #result-modal #close-modal {
+      height: 3rem;
+      width: 4.5rem;
+      padding: 5px;
+      border: 1px solid #fff;
+      border-radius: 5px;
+      background-color: #fff;
+      color: #7A3C74;
+      font-weight: 600;
+      cursor: pointer; }
+      body #result-modal #close-modal:hover {
+        background-color: #7A3C74;
+        color: #fff; }
+
+@media screen and (min-width: 1024px) {
+  body main #user #options-container {
+    padding: 0 15%; }
+  body #result-modal {
+    height: 300px;
+    width: 450px;
+    top: calc(50% - 150px);
+    left: calc(50% - 225px); } }

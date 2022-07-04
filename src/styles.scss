@@ -1,0 +1,161 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+$color-a: #7A6178;
+$color-b: #7A3C74;
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lato', sans-serif;
+}
+
+body{
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    position: relative;
+    header{
+        height: 10%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: $color-b;
+        color: #fff;
+    }
+    main{
+        height: 80%;
+        padding: 2rem 0;
+        display: grid;
+        grid-template-rows: 1fr 1fr;
+        #user{
+            display: grid;
+            grid-template-rows: 1fr 4fr 1fr;
+            h2, #user-choice{
+                align-self: center;
+                justify-self: center;
+                color: $color-a;
+            }
+            #options-container{
+                #options{
+                    height: 100%;
+                    display: flex;
+                    justify-content: space-evenly;
+                    align-items: center;
+                    list-style: none;
+                    .user-option{
+                        height: 5rem;
+                        width: 5rem;
+                        border-radius: 15px;
+                        display: flex;
+                        justify-content: space-around;
+                        align-items: center;
+                        background-color: $color-b;
+                        cursor: pointer;
+                        i{
+                            font-size: 3.5rem;
+                            color: #fff;
+                        }
+                    }
+                }
+            }
+        }
+        #computer{
+            display: grid;
+            grid-template-rows: 2fr 3fr;
+            align-items: center;
+            #computer-choice, #computer-selection{
+                align-self: center;
+                justify-self: center;
+                color: $color-a;
+            }
+            #computer-selection{
+                height: 5rem;
+                width: 5rem;
+                border-radius: 15px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background-color: $color-a;
+                i{
+                    font-size: 3.5rem;
+                    color: #fff;
+                }
+            }
+        }
+    }
+    footer{
+        height: 10%;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        background-color: $color-b;
+        color: #fff;
+        #round-result{
+            font-weight: 600;
+        }
+    }
+    #overlay{
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        display: none;
+        z-index: 1;
+        background-color: #f2f2f2;
+        opacity: 0.2;
+    }
+    #result-modal{
+        height: 200px;
+        width: 300px;
+        border-radius: 10px;
+        position: absolute;
+        top: calc(50% - 100px);
+        left: calc(50% - 150px);
+        display: none;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        z-index: 2;
+        background-color: $color-b;
+        color: #fff;
+        #message-modal{
+            font-size: 1.5rem;
+            font-weight: 600;
+        }
+        #close-modal{
+            height: 3rem;
+            width: 4.5rem;
+            padding: 5px;
+            border: 1px solid #fff;
+            border-radius: 5px;
+            background-color: #fff;
+            color: $color-b;
+            font-weight: 600;
+            cursor: pointer;
+            &:hover{
+                background-color: $color-b;
+                color: #fff;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    body{
+        main{
+            #user{
+                #options-container{
+                    padding: 0 15%;
+                }
+            }
+        }
+        #result-modal{
+            height: 300px;
+            width: 450px;
+            top: calc(50% - 150px);
+            left: calc(50% - 225px);
+        }
+    }    
+}
